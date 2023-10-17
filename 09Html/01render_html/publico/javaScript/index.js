@@ -1,0 +1,1 @@
+alert ('Link funcionando corretamente');
