@@ -49,11 +49,15 @@ footer{
 
 }
 
+h3 {
+    margin-top: 5px;
+}
 
 table {
     width: 50%;
     border-collapse: collapse;
     margin-left: 25%;
+    margin-top: -15px;
 }
 
 th, td {
