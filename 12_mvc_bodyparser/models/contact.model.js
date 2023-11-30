@@ -1,23 +1,23 @@
 class Cliente {
-    constructor (i){
-        this.id = i.id;
-        this.name = i.nome;
-        this.email = i.email;
-        this.senha = i.senha;
+    constructor (body){
+        this.id = null;
+        this.nome = body.nome;
+        this.email = body.email;
+        this.senha = body.senha;
     }
 
     create() {
-        return `INSERT INTO clientes VALUE ('${this.nome}', '${this.email}',
+        return `INSERT INTO contatos VALUE (default,'${this.nome}', '${this.email}',
         '${this.senha}');`
     }
     read() {
-        return `SELECT * FROM clientes WHERE id = ${this.id};`
+        return `SELECT * FROM contatos WHERE id = ${this.id};`
     }
     update() {
-        return `UPDATE * FROM cliente SET nome = '${this.nome}', senha = '${this.senha}', WHERE id = ${this.id};`
+        return `UPDATE * FROM contatos SET nome = '${this.nome}', senha = '${this.senha}', WHERE id = ${this.id};`
     }
     delete() {
-        return `DELETE FROM clientes WHERE id = ${this.id};`
+        return `DELETE FROM contatos WHERE id = ${this.id};`
     }
 }
 

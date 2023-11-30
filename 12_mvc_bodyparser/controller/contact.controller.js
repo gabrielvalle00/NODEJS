@@ -1,5 +1,6 @@
 
-const Cliente = require('../models/contact.model')
+const Cliente = require('../models/contact.model');
+const conMysql = require('../dao/connection.database');
 
 
 
@@ -9,9 +10,10 @@ const contact = (req, res) => {
 
 const saveContact = (req, res) => {
     let cliente = new Cliente(req.body);
-    console.log(cliente);
-    const {nome, email, senha} = req.body;
-    console.log(nome, email, senha);
+    conMysql.query(cliente.create())
+    //console.log(cliente);
+    //const {nome, email, senha} = req.body;
+    //console.log(nome, email, senha);
     res.render('contact');
 }
 
